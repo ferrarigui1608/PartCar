@@ -4,7 +4,7 @@
     padding: 0px;
     margin:0px;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    /*font-family: Roboto, sans-serif;*/
 }
 
 html{
@@ -29,11 +29,20 @@ footer > .container{
     align-items: center;
     padding-bottom: 10px;
 }
+/*etilo principal dos produtos*/
+
 .container{
-max-width: 1024px;
-width: 100%;
-margin: 0px auto;
-}
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
+    border-radius: 26px;
+    flex: auto;
+    text-align: center;
+    
+    
+    }
+
+
 
 .container-hamburguer{
     width: 32px;
@@ -59,17 +68,22 @@ nav ul{
     justify-content: left;
     padding-top: 10px;
     padding-bottom: 10px;
+
+   
 }
 
 nav ul li{
     margin-right: 20px;
     list-style: none;
+    
+    
 }
 
 nav ul li a{
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    
 }
 
 .container-flex{
@@ -90,6 +104,7 @@ section{
 }
 section h2 {
     margin-bottom: 16px;
+    
 }
 
 .lista-veiculos{
@@ -99,9 +114,14 @@ section h2 {
 .lista-veiculos li{
     list-style: none;
     max-width: 30%;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 .lista-veiculos li img{
     max-width: 100%;
+    border-radius: 12px;
+    align-items: center;
 }
 
 .lista-veiculos li h3 {
@@ -109,6 +129,10 @@ section h2 {
 }
 .item-central{
     margin: 0 5%;
+    
+}
+.item-central p{
+    align-items: center;
 }
 
 button{

@@ -15,7 +15,6 @@ html{
 
 header{
     background-color: rgb(22, 22, 22);
-    color: rgb(8, 8, 8);
     padding-top: 10px;
     position: sticky;
     top: 0;
@@ -38,11 +37,8 @@ footer > .container{
     max-width: 1000px;
     width: 100%;
     margin: 0px auto;
-    
     flex: auto;
     text-align: center;
-    
-    
     }
 
 

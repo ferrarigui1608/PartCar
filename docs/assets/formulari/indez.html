@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    
+  </head>
+  <body>
+    <div class="container-textos">
+      
+    </div>
+    <div class="container">
+      <form>
+        <h1>FORMULARIO </h1>
+
+        <div class="mb-3">
+          <label for="nome" class="form-label">Nome: </label>
+          <input type="text" class="nomeClient form-control" placeholder="Apenas letras">
+      </div>
+
+        <br>
+        <div class="mb-3">
+          <label for="cpf">Informe CPF: </label>
+          <input type="text" id="cpf" placeholder="Apenas Números" required />
+      </div>
+
+        <br>
+
+        <div class="form-row">
+          <label for="cep">informe o CEP</label>
+          <input type="text" name="cep" id="cep" onkeypress="validateCep()" onkeyup="validateCep()" maxlength="9"/>
+          <div id="message">CEP INVÁLIDO</div>
+        </div>
+
+        <br>
+        <div class="form-row">
+          <label for="Rua">Rua</label>
+          <input type="text" name="Rua" id="rua" disabled  /> 
+        </div>
+
+        <br>
+        <div class="form-row">
+          <label for="Bairro">Bairro</label>
+          <input type="text" name="Bairro" id="bairro" disabled />
+        </div>
+
+        <br>
+        <div class="div-dupla">
+          <label for="UF">UF</label>
+          <input type="text" name="UF" id="uf" disabled />
+        </div>
+
+        
+        <div class="form-row">
+          <label for="Cidade">Cidade</label>
+          <input type="text" name="Cidade" id="cidade" disabled />
+        </div>
+        
+
+        <div class="div-dupla">
+          <label for="DDD">DDD</label>
+          <input type="text" name="DDD" id="ddd" disabled />
+        </div>
+        <div class="form-row">
+          <label for="IBGE">IBGE</label>
+          <input type="text" name="IBGE" id="ibge" disabled />
+        </div>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

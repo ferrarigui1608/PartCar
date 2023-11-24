@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2? família=Montserrat:ital,wght@1,200&display=swap');
 
 *{
     padding: 0px;
@@ -211,3 +212,72 @@ footer .container{
 }
 
 
+
+
+
+
+
+
+/*Responsiviudade*/
+
+/*para mapa*/
+@media (max-width: 950px) {
+    .contato {
+        padding: 60px 0;
+ 
+    }
+    .contato .contato-card{
+     left: 40px;
+ 
+ }
+ 
+ }
+ @media (max-width: 800px) {
+     .contato {
+         padding: 20px 0;
+         
+     }
+ 
+     .contato .contato-card{
+         position: static;/*normal*/
+         margin: 40px auto;
+     }
+     
+ }   
+ /*tablets*/
+ @media (max-width: 767px) {
+    
+ }
+ /*phones*/
+ @media (max-width: 480px) {
+ 
+     body{
+         height: calc(100vh - 55px);
+     }
+ 
+     header nav ul  {
+         background: darkslategray;
+         position: fixed;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         padding: 0;
+         margin: 0;
+         z-index: 99;
+         background: lightsalmon;
+         color: cornsilk;
+         font-weight: bold;
+         height: 55px;
+ 
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+ 
+     }
+     header nav p{
+         width: 100%;
+         text-align: center;
+     }
+    
+     
+ }

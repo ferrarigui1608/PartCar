@@ -9,6 +9,20 @@
     /*font-family: Roboto, sans-serif;*/
 }
 
+.slide{
+    margin: 0 auto;
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+
+}
+.slide{
+
+}
+
+
+
+
 html{
     overflow-x: hidden;
 }

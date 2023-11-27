@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PartCar</title>
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -36,23 +36,62 @@
     <div class="container">
       <ul>
         <li><a href="#">Sobre</a></li>
-        <li><a href="#">Em destaque</a></li>
+        <li><a href="">Cadastro</a></li>
         <li><a href="#">Promoções</a></li>
         <li><a href="#">Contato</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- slides de carros para dar um estilo a pagina-->
-  <div id="slide">
-    <img src="assets/images/slide1.png" alt="Carro porche">
-    <img src="assets/images/slide2.png" alt="Carro BMW">
-    <img src="assets/images/slide3.png" alt="Carro ford">
+  <!-- slides de carros para dar um estilo a pagina
+  <div class="slide">
+    <img src="images/slide1.png" alt="Carro porche">
+    <img src="images/slide2.png" alt="Carro BMW">
+    <img src="images/slide3.png" alt="Carro ford">
+  </div>-->
+
+  <div class="slider">
+
+    <div class="slide">
+        <!--radio dos button-->
+        <input type="radio" name="radio-btn" id="radio01">
+        <input type="radio" name="radio-btn" id="radio02">
+        <input type="radio" name="radio-btn" id="radio03">
+        <input type="radio" name="radio-btn" id="radio04">
+        <!--fim do radio buttons-->
+
+        <!--slide das imagen-->
+        <div class="slide first">
+          <img src="images/slide1.png" alt="imagem-porche">
+        </div>
+
+        <div class="slide">
+          <img src="images/slide2.png" alt="Carro BMW">
+        </div>
+
+        <div class="slide">
+          <img src="images/slide3.png" alt="Carro ford">
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+
+      <div class="manual-navigation">
+        <label for="radio1"></label>
+      </div>
+
   </div>
+
+
   <!-- um pouco sobre o objetivo da loja e sobre ela -->
   <section id="sobre-a-loja">
     <div class="container container-flex">
-      <img src="assets/images/loja.jpg" alt="Loja Central Motors">
+      <img src="images/loja.jpg" alt="Loja Central Motors">
       <div>
         <h2> Sobre a Loja</h2>
         <p>Trabalhamos com vendas de peças para carros e com opção de delivery para toda Campinas e região, com todos
@@ -75,7 +114,7 @@
       <h2>Destaques:</h2>
       <ul class="container-flex lista-veiculos">
         <li>
-          <h3>Motor de Partida</h3>
+          <h3 class="nome-produto">Motor de Partida</h3>
           <h6>GM Onix LTZ AUT. 1.4 8V flex 2018</h6>
           <img
             src="https://img.freepik.com/fotos-gratis/peca-de-bicicleta-na-mesa-de-madeira_23-2148932631.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
@@ -91,7 +130,7 @@
 
 
         <li class="item-central">
-          <h3>Eixo transeiro</h3>
+          <h3 class="nome-produto">Eixo transeiro</h3>
           <h6>Eixo Traseiro Mercedes Benz Cla 45 Amg</h6>
           <img
             src="https://img.freepik.com/fotos-premium/suspensao-do-carro-3d-no-fundo-branco_751108-1059.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
@@ -107,7 +146,7 @@
 
 
         <li>
-          <h3> Painel Honda City
+          <h3 class="nome-produto"> Painel Honda City</h3>
             <h6>Paine atualizado do Honda-City</h6>
             <img
               src="https://img.freepik.com/fotos-premium/painel-velocimetro-do-carro-e-contador-com-modo-escuro_35148-995.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
@@ -127,7 +166,7 @@
 
 
         <li>
-          <h3>Volante Retro</h3>
+          <h3 class="nome-produto">Volante Retro</h3>
           <h6>Eixo Traseiro Mercedes Benz Cla 45 Amg</h6>
           <img
             src="https://img.freepik.com/fotos-premium/roda-de-carro-de-madeira-antiga-isolada-no-fundo-branco_908985-22771.jpg?size=626&ext=jpg&ga=GA1.2.1846741798.1696979232&semt=ais"
@@ -144,7 +183,7 @@
            <button type="button">Tenho interesse</button>
 
            <li class="item-central">
-            <h3> Painel Volkswagen</h3>
+            <h3 class="nome-produto"> Painel Volkswagen</h3>
             <h6>Eixo Traseiro Mercedes Benz Cla 45 Amg</h6>
               <img
                 src="https://img.freepik.com/fotos-premium/painel-velocimetro-do-carro-e-contador-com-modo-escuro_35148-995.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
@@ -160,15 +199,15 @@
           </li>
   
           <li>
-            <h3>Volante Retro</h3>
-            <h6>Eixo Traseiro Mercedes Benz Cla 45 Amg</h6>
+            <h3 class="nome-produto">Bateria Carro</h3>
+            <h6>Bateria nova e original só aqui </h6>
             <img
-              src="https://img.freepik.com/fotos-premium/roda-de-carro-de-madeira-antiga-isolada-no-fundo-branco_908985-22771.jpg?size=626&ext=jpg&ga=GA1.2.1846741798.1696979232&semt=ais"
+              src="https://as2.ftcdn.net/v2/jpg/01/48/69/31/1000_F_148693182_zQGxssTjnEIi4KYOmaTnBbFcYoNHChh2.jpg"
               alt="Carro BMW">
             <p>
-              Volante Retro para carros classicos,
-              feita de couro sua mão ficará muito 
-              confortavél nesse volante.
+             uma bateria importada da inglaterra 
+             com garantia de 1 ano de uso 
+             vem garantir sua bateria hoje.
             </p>
             <div class="price">
               <strong>R$ 800,00</strong>
@@ -184,7 +223,7 @@
   </section>
   <section>
     <div class="container">
-      <h2>Promoções:</h2>
+      <h2 class="nome-produto">Promoções:</h2>
       <ul class="container-flex lista-veiculos">
         <li>
           <h3>Kit 4 pneus aro 18</h3>
@@ -207,7 +246,7 @@
 
         </li>
         <li class="item-central">
-          <h3>Kit rolamento </h3>
+          <h3 class="nome-produto">Kit rolamento </h3>
           <img
             src="https://img.freepik.com/fotos-gratis/rodas-de-metal-de-engrenagem-isoladas-no-fundo-branco_93675-135487.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
             alt="Carro BMW">
@@ -227,7 +266,7 @@
 
         </li>
         <li>
-          <h3>Kit multimídia </h3>
+          <h3 class="nome-produto">Kit multimídia </h3>
           <img
             src="https://img.freepik.com/fotos-gratis/close-up-na-mulher-no-carro-eletrico_23-2149146253.jpg?size=626&ext=jpg&ga=GA1.2.1846741798.1696979232&semt=ais"
             alt="Carro BMW">
@@ -243,7 +282,7 @@
           <button type="button">Tenho interesse</button>
         </li>
         <li>
-          <h3>Filtro de carro</h3>
+          <h3 class="nome-produto">Filtro de carro</h3>
           <img
             src="https://img.freepik.com/fotos-gratis/composicao-de-acessorios-para-carros-diferentes_23-2149030383.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
             alt="Carro BMW">
@@ -259,7 +298,7 @@
           <button type="button">Tenho interesse</button>
         </li>
         <li class="item-central">
-          <h3>Pastilha de freio</h3>
+          <h3 class="nome-produto">Pastilha de freio</h3>
           <img
             src="https://img.freepik.com/fotos-gratis/mecanico-trocando-discos-de-freio-em-servico-de-carro_1303-26910.jpg?size=626&ext=jpg&ga=GA1.1.786990617.1698188706&semt=ais"
             alt>
@@ -275,9 +314,9 @@
         </li>
 
         <li>
-          <h3>Kit multimídia </h3>
+          <h3 class="nome-produto">Capa do Carro</h3>
           <img
-            src="https://img.freepik.com/fotos-gratis/close-up-na-mulher-no-carro-eletrico_23-2149146253.jpg?size=626&ext=jpg&ga=GA1.2.1846741798.1696979232&semt=ais"
+            src="https://img.freepik.com/vetores-gratis/carro-realista-coberto-com-seda-vermelha-isolado-no-fundo-branco_1441-2576.jpg?size=626&ext=jpg&ga=GA1.1.919893717.1700866236&semt=ais"
             alt="Carro BMW">
           <p>
             Uma interface multimídia é, justamente, variadas funções e
@@ -285,12 +324,12 @@
             
           </p>
           <div class="price">
-            <del>R$ 3.000,00</del>
-            <strong>R$ 2.400,00</strong>
+            <del>R$ 200,00</del>
+            <strong>R$ 90,00</strong>
           </div>
           <button type="button">Tenho interesse</button>
         </li>
-        
+
       </ul>
     </div>
   </section>
@@ -343,9 +382,25 @@
   <script src="assets/js/main.js"></script>
 
 
-
+  <script type="module">
+    
+   
+   
+    const firebaseConfig = {
+      apiKey: "AIzaSyCUY8970EQVN0ReCmUTNYgYTKUzVTeJmZ4",
+      authDomain: "partcar-1df34.firebaseapp.com",
+      databaseURL: "https://partcar-1df34-default-rtdb.firebaseio.com",
+      projectId: "partcar-1df34",
+      storageBucket: "partcar-1df34.appspot.com",
+      messagingSenderId: "791530401222",
+      appId: "1:791530401222:web:5015938a01217d07e416c7",
+      measurementId: "G-QFMQ0F274J"
+    };
   
-
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+   
+  </script>
 
 </body>
 

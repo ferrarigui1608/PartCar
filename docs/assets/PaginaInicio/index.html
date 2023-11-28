@@ -1,407 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PartCar</title>
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+  <title>JS Pizza</title>
 </head>
 
 <body>
-  <!--
-    intro da pagina
-  -->
-  
   <header>
-    <div class="container">
-
-      <h1 >PartCar</h1>
-
-      <div id="menu-hamburguer" class="container-hamburguer">
-        <div class="menu-hamburguer"></div>
-        <div class="menu-hamburguer"></div>
-        <div class="menu-hamburguer"></div>
-      </div>
-    </div>
+    <div class="menu-openner"><span>0</span>🛒</div>
   </header>
-  <nav id="menu">
-    <div class="container">
-      <ul>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="">Cadastro</a></li>
-        <li><a href="#">Promoções</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
+  <main>
+    <nav>
+      <p>Hawking</p>
+     <ul>
+       <li><a href="#home">Home</a></li>
+       <li><a href="#servicos">Serviços</a></li>
+       <li><a href="login/home.html">Login</a></li>
+     </ul>
+   </nav>
+  
+    <h1>Produtos  <span>Menu</span></h1>
+    <div class="pizza-area"></div>
+  </main>
+
+  <aside>
+    <div class="cart--area">
+
+      <div class="menu-closer">❌</div>
+      <h1>Seu Carrinho</h1>
+      <div class="cart"></div>
+
+      <div class="cart--details">
+        <div class="cart-value subtotal">
+          <span>Subtotal</span>
+          <span class="cart-value-subtotal">R$ --</span>
+        </div>
+        <div class="cart-value desconto">
+          <span>Desconto (-10%)</span>
+          <span class="cart-value-desconto">R$ --</span>
+        </div>
+        <div class="cart-value total big">
+          <span>Total</span>
+          <span class="cart-value-total">R$ --</span>
+        </div>
+        <div class="cart--finalizar">Finalizar a compra</div>
+      </div>
+      <!--cart--details-->
+
     </div>
-  </nav>
+    <!--cart--area-->
+  </aside>
 
-  <!-- slides de carros para dar um estilo a pagina
-  <div class="slide">
-    <img src="images/slide1.png" alt="Carro porche">
-    <img src="images/slide2.png" alt="Carro BMW">
-    <img src="images/slide3.png" alt="Carro ford">
-  </div>-->
-
-  <div class="slider">
-
-    <div class="slide">
-        <!--radio dos button-->
-        <input type="radio" name="radio-btn" id="radio01">
-        <input type="radio" name="radio-btn" id="radio02">
-        <input type="radio" name="radio-btn" id="radio03">
-        <input type="radio" name="radio-btn" id="radio04">
-        <!--fim do radio buttons-->
-
-        <!--slide das imagen-->
-        <div class="slide first">
-          <img src="images/slide1.png" alt="imagem-porche">
-        </div>
-
-        <div class="slide">
-          <img src="images/slide2.png" alt="Carro BMW">
-        </div>
-
-        <div class="slide">
-          <img src="images/slide3.png" alt="Carro ford">
-        </div>
-
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
-        </div>
+  <!--Modal-->
+  <div class="pizza-modal">
+    <div class="pizza-modal-content">
+      <div class="pizza-info--cancelMobileButton" onclick=Modal.close()>
+        Voltar
       </div>
 
-      <div class="manual-navigation">
-        <label for="radio1"></label>
-      </div>
+      <img class="pizza-modal-img" src="" />
 
+      <div class="pizza-info">
+        <h1>--</h1>
+        <div class="pizza-info--desc">--</div>
+        <div class="pizza-info--sizearea">
+          <div class="pizza-info--sector">Tamanho</div>
+          <div class="pizza-info--sizes">
+            <div data-key="0" class="pizza-info--size">TAMANHO <span>--</span></div>
+            <div data-key="1" class="pizza-info--size">TAMANHO <span>--</span></div>
+            <div data-key="2" class="pizza-info--size selected">TAMANHO <span>--</span></div>
+          </div>
+        </div>
+
+        <div class="pizza-info--pricearea">
+          <div class="pizza-info--sector">Preço</div>
+          <div class="pizza-info--price">
+            <div class="pizza-info--actualPrice">R$ --</div>
+            <div class="pizza-info--qtarea">
+              <button class="pizza-info--qtmenos">-</button>
+              <div class="pizza-info--qt">1</div>
+              <button class="pizza-info--qtmais">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pizza-info--addButton">Adicionar ao carrinho</div>
+        <div class="pizza-info--cancelButton" onclick=Modal.close()>
+          Cancelar
+        </div>
+      </div>
+    </div>
   </div>
+  <!--Modal-->
 
-
-  <!-- um pouco sobre o objetivo da loja e sobre ela -->
-  <section id="sobre-a-loja">
-    <div class="container container-flex">
-      <img src="images/loja.jpg" alt="Loja Central Motors">
-      <div>
-        <h2> Sobre a Loja</h2>
-        <p>Trabalhamos com vendas de peças para carros e com opção de delivery para toda Campinas e região, com todos
-          tipos de acessorio e ferramentas para automoveis.
-          Entre em contato pelo conosco e faça seu pedido. Instagram @PartCar2023. </p>
-        <p></p>
-      </div>
-    </div>
-  </section>
-  <section>
-
-
-
-
-    <!-- produtos para venda na loja -->
-
-    <!-- essa primeira div sera a principal-->
-    <div class="container">
-
-      <h2>Destaques:</h2>
-      <ul class="container-flex lista-veiculos">
-        <li>
-          <h3 class="nome-produto">Motor de Partida</h3>
-          <h6>GM Onix LTZ AUT. 1.4 8V flex 2018</h6>
-          <img
-            src="https://img.freepik.com/fotos-gratis/peca-de-bicicleta-na-mesa-de-madeira_23-2148932631.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
-            alt="Carro BMW">
-          <p>
-            ele é Principal responsável por fazer o motor principal dar os seus primeiros giros
-          </p>
-          <div class="price">
-            <strong>R$ 1.400,00</strong>
-          </div>
-          <button type="button">Tenho interesse</button>
-        </li>
-
-
-        <li class="item-central">
-          <h3 class="nome-produto">Eixo transeiro</h3>
-          <h6>Eixo Traseiro Mercedes Benz Cla 45 Amg</h6>
-          <img
-            src="https://img.freepik.com/fotos-premium/suspensao-do-carro-3d-no-fundo-branco_751108-1059.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
-            alt="Carro BMW">
-          <p>
-            faz o acoplamento das rodas dianteiras, sistema de frenagem, do veículo ao chassi do ônibus ou chassi.
-          </p>
-          <div class="price">
-            <strong>R$ 2.600,00</strong>
-          </div>
-          <button type="button">Tenho interesse</button>
-        </li>
-
-
-        <li>
-          <h3 class="nome-produto"> Painel Honda City</h3>
-            <h6>Paine atualizado do Honda-City</h6>
-            <img
-              src="https://img.freepik.com/fotos-premium/painel-velocimetro-do-carro-e-contador-com-modo-escuro_35148-995.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
-              alt="Carro BMW">
-            <p>
-              Painel de controle eletrico 2021,
-              muita praticidade e tecnologia 
-              temos  nesse painel Honda City.
-             
-
-            </p>
-            <div class="price">
-              <strong>R$ 900,00</strong>
-            </div>
-            <button type="button">Tenho interesse</button>
-        </li>
-
-
-        <li>
-          <h3 class="nome-produto">Volante Retro</h3>
-          <h6>Eixo Traseiro Mercedes Benz Cla 45 Amg</h6>
-          <img
-            src="https://img.freepik.com/fotos-premium/roda-de-carro-de-madeira-antiga-isolada-no-fundo-branco_908985-22771.jpg?size=626&ext=jpg&ga=GA1.2.1846741798.1696979232&semt=ais"
-            alt="Carro BMW">
-          <p>
-            Volante Retro para carros classicos,
-            feita de couro sua mão ficará muito 
-            confortavél nesse volante.
-          </p>
-          <div class="price">
-            <strong>R$ 800,00</strong>
-          </div>
-    
-           <button type="button">Tenho interesse</button>
-
-           <li class="item-central">
-            <h3 class="nome-produto"> Painel Volkswagen</h3>
-            <h6>Eixo Traseiro Mercedes Benz Cla 45 Amg</h6>
-              <img
-                src="https://img.freepik.com/fotos-premium/painel-velocimetro-do-carro-e-contador-com-modo-escuro_35148-995.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
-                alt="Carro BMW">
-              <p>
-                Painel elétrico e digital 2022 para a marca 
-                Volkswagen Carro Nivus 2 anos de Garantia 
-              </p>
-              <div class="price">
-                <strong>R$ 1.900,00</strong>
-              </div>
-              <button type="button">Tenho interesse</button>
-          </li>
-  
-          <li>
-            <h3 class="nome-produto">Bateria Carro</h3>
-            <h6>Bateria nova e original só aqui </h6>
-            <img
-              src="https://as2.ftcdn.net/v2/jpg/01/48/69/31/1000_F_148693182_zQGxssTjnEIi4KYOmaTnBbFcYoNHChh2.jpg"
-              alt="Carro BMW">
-            <p>
-             uma bateria importada da inglaterra 
-             com garantia de 1 ano de uso 
-             vem garantir sua bateria hoje.
-            </p>
-            <div class="price">
-              <strong>R$ 800,00</strong>
-            </div>
-      
-             <button type="button">Tenho interesse</button>
-
-    
-
-    </li>
-    </ul>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <h2 class="nome-produto">Promoções:</h2>
-      <ul class="container-flex lista-veiculos">
-        <li>
-          <h3>Kit 4 pneus aro 18</h3>
-          <img
-            src="https://img.freepik.com/fotos-premium/quatro-rodas-de-carro-isoladas-montao-ilustracao-de-renderizacao-3d_97167-134.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
-            alt="Carro BMW">
-          <p>
-            Pneus novos bons para chuva e sol 
-            com antiderrapantes exclusivos 
-            com 1 ano de garantia
-          </p>
-          <div class="price">
-            <del>R$ 6.00,00</del>
-            <strong>R$ 4.800,00</strong>
-          </div>
-          <button type="button">Tenho interesse</button>
-
-
-
-
-        </li>
-        <li class="item-central">
-          <h3 class="nome-produto">Kit rolamento </h3>
-          <img
-            src="https://img.freepik.com/fotos-gratis/rodas-de-metal-de-engrenagem-isoladas-no-fundo-branco_93675-135487.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
-            alt="Carro BMW">
-          <p>
-             Os rolamentos são dispositivos desenvolvidos
-             para permitir o movimento rotativo,
-             seja ele controlado ou não.
-            
-          </p>
-          <div class="price">
-            <del>R$ 800,00</del>
-            <strong>R$ 500,00</strong>
-          </div>
-          <button type="button">Tenho interesse</button>
-
-
-
-        </li>
-        <li>
-          <h3 class="nome-produto">Kit multimídia </h3>
-          <img
-            src="https://img.freepik.com/fotos-gratis/close-up-na-mulher-no-carro-eletrico_23-2149146253.jpg?size=626&ext=jpg&ga=GA1.2.1846741798.1696979232&semt=ais"
-            alt="Carro BMW">
-          <p>
-            Uma interface multimídia é, justamente, variadas funções e
-            a conexão com outros dispositivos, navegação GPS, Musica, Radio.
-            
-          </p>
-          <div class="price">
-            <del>R$ 3.000,00</del>
-            <strong>R$ 2.400,00</strong>
-          </div>
-          <button type="button">Tenho interesse</button>
-        </li>
-        <li>
-          <h3 class="nome-produto">Filtro de carro</h3>
-          <img
-            src="https://img.freepik.com/fotos-gratis/composicao-de-acessorios-para-carros-diferentes_23-2149030383.jpg?size=626&ext=jpg&ga=GA1.1.1846741798.1696979232&semt=ais"
-            alt="Carro BMW">
-          <p>
-            Filtros automotivos são peças que tem como finalidade
-            resguardar o motor, com o objetivo de aumentar
-            a sua vida útil.
-          </p>
-          <div class="price">
-            <del>R$ 500,00</del>
-            <strong>R$ 400,00</strong>
-          </div>
-          <button type="button">Tenho interesse</button>
-        </li>
-        <li class="item-central">
-          <h3 class="nome-produto">Pastilha de freio</h3>
-          <img
-            src="https://img.freepik.com/fotos-gratis/mecanico-trocando-discos-de-freio-em-servico-de-carro_1303-26910.jpg?size=626&ext=jpg&ga=GA1.1.786990617.1698188706&semt=ais"
-            alt>
-          <p>
-            Pastilha novas zero, Sua função consiste em reduzir
-            a velocidade do carro e pará-lo com segurança.
-          </p>
-          <div class="price">
-            <del>R$ 500,00</del>
-            <strong>R$ 400,00</strong>
-          </div>
-            <button type="button">Tenho interesse</button>
-        </li>
-
-        <li>
-          <h3 class="nome-produto">Capa do Carro</h3>
-          <img
-            src="https://img.freepik.com/vetores-gratis/carro-realista-coberto-com-seda-vermelha-isolado-no-fundo-branco_1441-2576.jpg?size=626&ext=jpg&ga=GA1.1.919893717.1700866236&semt=ais"
-            alt="Carro BMW">
-          <p>
-            Uma interface multimídia é, justamente, variadas funções e
-            a conexão com outros dispositivos, navegação GPS, Musica, Radio.
-            
-          </p>
-          <div class="price">
-            <del>R$ 200,00</del>
-            <strong>R$ 90,00</strong>
-          </div>
-          <button type="button">Tenho interesse</button>
-        </li>
-
-      </ul>
-    </div>
-  </section>
-  <section id="contato">
-    <div class="contatos container">
-      <h2>Entre em contato:</h2>
-      <form action="">
-        <div class="form-campo">
-          <label for="nome">Nome:</label>
-          <input type="text" name="nome" id="nome">
-        </div>
-        <div class="form-campo">
-          <label for="telefone">Telefone:</label>
-          <input type="tel" name="telefone" id="telefone">
-        </div>
-        <div class="form-campo">
-          <label for="email">E-mail:</label>
-          <input type="email" name="email" id="email">
-        </div>
-        <div class="form-campo">
-          <label for="veiculoInteresse">Veiculo de interesse:</label>
-          <input type="text" name="veiculoInteresse" id="veiculo-interesse">
-        </div>
-        <div class="form-campo">
-          <label for="mensagem">Mensagem:</label>
-          <textarea name="mensagem" id="" cols="30" rows="10"></textarea>
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
-    </div>
-  </section>
-  <footer>
-    <div class="container container-flex">
-      <p>
-        &COPY;2023 ParteCAr - Trabalho desenvolvimento Web - Prof. João - Todos direitos Reservados.
-      </p>
-      <ul class="container-flex">
-        <li><a href="#"><img src="assets/images/icones/facebook.png" alt="Facebook"></a></li>
-        <li><a href="#"><img src="assets/images/icones/instagram.png" alt="Instagram"></a></li>
-        <li><a href="#"><img src="assets/images/icones/youtube.png" alt="You tube"></a></li>
-      </ul>
-    </div>
-  </footer>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="assets/js/jquery.mask.min.js"></script>
-  <script src="assets/js/jquery.validate.min.js"></script>
-  <script src="assets/js/messages_pt_BR.min.js"></script>
-  <script src="assets/js/main.js"></script>
-
-
-  <script type="module">
-    
-   
-   
-    const firebaseConfig = {
-      apiKey: "AIzaSyCUY8970EQVN0ReCmUTNYgYTKUzVTeJmZ4",
-      authDomain: "partcar-1df34.firebaseapp.com",
-      databaseURL: "https://partcar-1df34-default-rtdb.firebaseio.com",
-      projectId: "partcar-1df34",
-      storageBucket: "partcar-1df34.appspot.com",
-      messagingSenderId: "791530401222",
-      appId: "1:791530401222:web:5015938a01217d07e416c7",
-      measurementId: "G-QFMQ0F274J"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-   
-  </script>
-
+  <script type="text/javascript" src="pizzaList.js"></script>
+  <script type="text/javascript" src="Modal.js"></script>
+  <script type="text/javascript" src="Cart.js"></script>
+  <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
